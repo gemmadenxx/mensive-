@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Happy 3rd Mensiversary!</title>
+    <style>
+        body {
+            background-color: #fff0f5;
+            font-family: 'Poppins', sans-serif;
+            text-align: center;
+            padding: 50px;
+            overflow-x: hidden;
+            position: relative;
+        }
+        h1 {
+            color: #ff6699;
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+        #typed-text {
+            font-size: 22px;
+            color: #333;
+            max-width: 600px;
+            margin: 20px auto;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+        }
+        .heart {
+            font-size: 50px;
+            color: #ff3366;
+            margin-bottom: 20px;
+        }
+        .signature {
+            margin-top: 50px;
+            font-style: italic;
+            color: #666;
+            font-size: 18px;
+        }
+        /* floating hearts */
+        .floating-heart {
+            position: absolute;
+            color: #ff6699;
+            font-size: 24px;
+            animation: floatUp 8s infinite;
+        }
+        @keyframes floatUp {
+            0% {
+                bottom: 0;
+                opacity: 1;
+                transform: translateX(0);
+            }
+            50% {
+                opacity: 0.5;
+                transform: translateX(50px);
+            }
+            100% {
+                bottom: 100%;
+                opacity: 0;
+                transform: translateX(-50px);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="heart">❤️</div>
+    <h1>Happy 3 Month Mensive Yaa ❤️</h1>
+    <div id="typed-text"></div>
+    <h2 style="margin-top:40px;">Happy Us Day 🤍</h2>
+    <div class="signature">
+        by : Gemma
+    </div>
+
+    <!-- Floating Hearts -->
+    <div class="floating-heart" style="left: 10%;">❤️</div>
+    <div class="floating-heart" style="left: 30%;">❤️</div>
+    <div class="floating-heart" style="left: 50%;">❤️</div>
+    <div class="floating-heart" style="left: 70%;">❤️</div>
+    <div class="floating-heart" style="left: 90%;">❤️</div>
+
+    <script>
+        const text = `Sayangg, aku cuman mau bilang aku sayang banget sama kamu. Makasih ya sudah mau bertahan sampai sekarang, walau banyak aku nyebelinnya. Aku masih nggak nyangka kita bisa cetak rekor 3 bulan ini hahaha. Walau kamu sibuk, aku sibuk, ternyata kita saling mengerti. Makasih yaaa ❤️❤️❤️❤️ Keep the love alive, and on to our next chapter — we can still going strong to endless love! 😍`;
+        let index = 0;
+        const speed = 5; // kecepatan ngetik, makin kecil makin cepat
+
+        function typeWriter() {
+            if (index < text.length) {
+                document.getElementById('typed-text').innerHTML += text.charAt(index);
+                index++;
+                setTimeout(typeWriter, speed);
+            }
+        }
+
+        window.onload = typeWriter;
+    </script>
+</body>
+</html>
